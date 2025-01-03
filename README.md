@@ -1,19 +1,40 @@
-# K9-Robot-Project
-Building a functional robot dog inspired by K9 from Doctor Who, integrating robotics and programming.
-**Inspired by Doctor Who's K9, this project aims to build a functional robot dog using robotics and programming tools like Raspberry Pi, micro-ROS, and Python.**
+# K9 Robot Dog Build
 
-## Current Progress
-- [x] Set up Raspberry Pi 5 with ROS2
-- [ ] Integrate motor controls for movement
-- [ ] Develop object detection capabilities
-- [ ] Add voice responses and commands
+![K9 Robot Image](link-to-your-image)
 
-## Technologies Used
-- **Hardware**: Raspberry Pi 5, ESP32 microcontroller
-- **Software**: ROS2 Humble, Python, micro-ROS
-- **Tools**: CAD for design, micro-ROS for communication, Webots for simulation
+## Overview
+This repository contains the 2024 version of the **K9 Robot Dog Software**, updated for Raspberry Pi 5 with improved capabilities in speech recognition, navigation, and 3D vision.
 
-## How to Replicate
-1. Clone the repository:
+The K9 robot features:
+- Real-time speech interactions with GPT-3/3.5 and offline fallback.
+- LIDAR-based navigation and collision avoidance.
+- OAK-D stereo camera for 3D vision and object detection.
+- Chess-playing functionality via Lichess API.
+
+## Core Features
+- **Speech Recognition:** Offline STT with Mozilla DeepSpeech or Coqui STT, and online GPT-powered interactions.
+- **Navigation:** Redis and MQTT used for state sharing and pub/sub communication between modules.
+- **Vision Pipeline:** OAK-D Lite for real-time object detection, depth sensing, and collision avoidance.
+- **Modular Design:** Key modules include motors, lights, ears, and memory, each running independently but integrated through Redis/MQTT.
+
+## Hardware Requirements
+- Raspberry Pi 5 (2GB or more recommended)
+- Adafruit I2C PCA9685 Servo controller
+- Espruino Pico for LIDAR ears
+- USB microphone
+- RoboClaw PID motor controller
+- OAK-D camera
+
+## Software Requirements
+- Python 3.10+
+- Redis for shared memory
+- MQTT for pub/sub communication
+- DepthAI SDK for OAK-D integration
+
+## Installation
+
+### Prerequisites
+1. Install system dependencies:
    ```bash
-   git clone https://github.com/yourusername/K9-Robot-Dog.git
+   
+
